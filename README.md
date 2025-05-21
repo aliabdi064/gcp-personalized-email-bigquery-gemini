@@ -71,11 +71,10 @@ This lab provided hands-on experience with building an event-driven, AI-powered 
 Below are some representative code snippets from the lab (ensure all sensitive information like Project IDs are genericized if you adapt these):
 
 **1. Creating the BigQuery ML Remote Model:**
-```sql
-Create a BigQuery ML remote model named gemini_2_0_flash
+-- Create a BigQuery ML remote model named gemini_2_0_flash
 CREATE MODEL `[YOUR_PROJECT_ID].continuous_queries.gemini_2_0_flash`
 REMOTE WITH CONNECTION `[YOUR_REGION].continuous-queries-connection`
-OPTIONS(endpoint = 'gemini-2.0-flash-001')```
+OPTIONS(endpoint = 'gemini-2.0-flash-001');
 
 ..................................................................................................................
 **2. The Core Continuous Query:**
@@ -84,7 +83,7 @@ OPTIONS(endpoint = 'gemini-2.0-flash-001')```
 
 EXPORT DATA
  OPTIONS (format = CLOUD_PUBSUB,
- uri = "[https://pubsub.googleapis.com/projects/](https://pubsub.googleapis.com/projects/)[YOUR_PROJECT_ID]/topics/recapture_customer")
+ uri = "https://pubsub.googleapis.com/projects/[YOUR_PROJECT_ID]/topics/recapture_customer")
 AS (
   SELECT
    TO_JSON_STRING(
@@ -128,10 +127,8 @@ AS (
 ................................................................
 
 
-## Potential Extensions
-* Integrating with a CRM for more comprehensive customer data.
-* Adding A/B testing for different email prompts.
-* Implementing more sophisticated analytics on email open rates and conversion.
-
+-- Insert details for an abandoned shopping cart to the table
+INSERT INTO `[YOUR_PROJECT_ID].continuous_queries.abandoned_carts`(customer_name, customer_email, products)
+VALUES ("Test Customer","test@example.com","Violin Strings, Tiny Saxophone, Guitar Strap");
 
 
