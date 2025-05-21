@@ -1,0 +1,1 @@
+# gcp-personalized-email-bigquery-gemini
