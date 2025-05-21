@@ -76,6 +76,9 @@ Below are some representative code snippets from the lab (ensure all sensitive i
 CREATE MODEL `[YOUR_PROJECT_ID].continuous_queries.gemini_2_0_flash`
 REMOTE WITH CONNECTION `[YOUR_REGION].continuous-queries-connection`
 OPTIONS(endpoint = 'gemini-2.0-flash-001');
+--
+..................................................................................................................
+**2. The Core Continuous Query:**
 
 
 
@@ -122,7 +125,7 @@ AS (
 
 
 
-
+................................................................
 
 
 ## Potential Extensions
