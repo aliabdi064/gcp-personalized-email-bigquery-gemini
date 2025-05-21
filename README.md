@@ -72,11 +72,11 @@ Below are some representative code snippets from the lab (ensure all sensitive i
 
 **1. Creating the BigQuery ML Remote Model:**
 ```sql
--- Create a BigQuery ML remote model named gemini_2_0_flash
+Create a BigQuery ML remote model named gemini_2_0_flash
 CREATE MODEL `[YOUR_PROJECT_ID].continuous_queries.gemini_2_0_flash`
 REMOTE WITH CONNECTION `[YOUR_REGION].continuous-queries-connection`
-OPTIONS(endpoint = 'gemini-2.0-flash-001');
---
+OPTIONS(endpoint = 'gemini-2.0-flash-001')```
+
 ..................................................................................................................
 **2. The Core Continuous Query:**
 
